@@ -31,8 +31,10 @@ const Dealer = () => {
     const retobj = await res.json();
     
     if(retobj.status === 200) {
+        console.log(retobj)
       let dealerobjs = Array.from(retobj.dealer)
-      setDealer(dealerobjs[0])
+      setDealer(retobj.dealer)
+      console.log(dealerobjs)
     }
   }
 
