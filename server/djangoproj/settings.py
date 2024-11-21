@@ -28,7 +28,7 @@ SECRET_KEY =\
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','http://localhost:8000/']
+ALLOWED_HOSTS = ['localhost', 'http://localhost:8000/']
 CSRF_TRUSTED_ORIGINS = ['http://localhost:8000/']
 
 REST_FRAMEWORK = {
@@ -94,7 +94,8 @@ DATABASES = {
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME':
-        'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        '''django.contrib.auth.password_validation.
+        UserAttributeSimilarityValidator''',
     },
     {
         'NAME':

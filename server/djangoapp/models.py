@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # CarMake Model
 class CarMake(models.Model):
     name = models.CharField(max_length=100)
@@ -12,7 +13,9 @@ class CarMake(models.Model):
 
 # CarModel Model
 class CarModel(models.Model):
-    car_make = models.ForeignKey(CarMake, on_delete=models.CASCADE)  # Many-to-One relationship
+    car_make = models.ForeignKey(
+        CarMake, on_delete=models.CASCADE
+    )  # Many-to-One relationship
     name = models.CharField(max_length=100)
     CAR_TYPES = [
         ('SEDAN', 'Sedan'),
@@ -26,3 +29,4 @@ class CarModel(models.Model):
 
     def __str__(self):
         return self.name  # Return the name as the string representation
+
