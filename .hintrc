@@ -1,6 +1,7 @@
 {
   "esversion": 6,
-  "extends": [
-    "development"
-  ]
+  "browser": true,
+  "node": true,
+  "undef": true,
+  "unused": true
 }
