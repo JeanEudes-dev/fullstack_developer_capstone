@@ -19,7 +19,7 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(
                     auto_created=True,
                     primary_key=True,
-                    serialize=False, 
+                    serialize=False,
                     verbose_name='ID')),
                 ('name', models.CharField(max_length=100)),
                 ('description', models.TextField()),
@@ -30,8 +30,8 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.BigAutoField(
                     auto_created=True,
-                    primary_key=True, 
-                    serialize=False, 
+                    primary_key=True,
+                    serialize=False,
                     verbose_name='ID')),
                 ('dealer_id', models.IntegerField()),
                 ('name', models.CharField(max_length=100)),
