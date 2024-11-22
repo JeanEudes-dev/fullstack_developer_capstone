@@ -1,53 +1,42 @@
-// eslint.config.js
-module.exports = {
-  root: true, // Marks the project as the root of the ESLint config
+// eslint.config.mjs
+export default {
+  root: true,
   parserOptions: {
-    ecmaVersion: 'latest', // Supports the latest ECMAScript features
-    sourceType: 'module',  // Supports ES Modules
+    ecmaVersion: 'latest',
+    sourceType: 'nodes_modules',
   },
-  extends: [
-    'eslint:recommended',
-  ],
+  extends: ['eslint:recommended'],
   env: {
-    node: true,  // Enable Node.js global variables for the server
-    browser: true, // Enable browser global variables for the client
+    node: true,
+    browser: true,
   },
   overrides: [
     {
-      // React-specific settings
       files: ['frontend/**/*.{js,jsx,ts,tsx}'],
       parserOptions: {
-        ecmaVersion: 2020,
+        ecmaVersion: 2024,
         sourceType: 'module',
       },
-      extends: [
-        'eslint:recommended',
-        'plugin:react/recommended',
-        'plugin:@typescript-eslint/recommended', // if using TypeScript
-      ],
+      extends: ['eslint:recommended', 'plugin:react/recommended'],
       env: {
-        browser: true, // React runs in the browser
+        browser: true,
       },
       rules: {
-        'react/prop-types': 'off', // Customize React-specific rules
+        'react/prop-types': 'off',
       },
     },
     {
-      // Express.js-specific settings
       files: ['database/**/*.{js,ts}'],
       parserOptions: {
-        ecmaVersion: 2020,
-        sourceType: 'module',
+        ecmaVersion: 2024,
+        sourceType: 'node_modules',
       },
-      extends: [
-        'eslint:recommended',
-        'plugin:@typescript-eslint/recommended', // If using TypeScript
-      ],
+      extends: ['eslint:recommended'],
       env: {
-        node: true, // Express runs on Node.js
+        node: true,
       },
       rules: {
-        'no-console': 'warn', // Customize Express-specific rules
+        'no-console': 'warn',
       },
     },
   ],
