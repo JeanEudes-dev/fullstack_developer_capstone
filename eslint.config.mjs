@@ -1,6 +1,3 @@
-import eslintRecommended from 'eslint/conf/eslint-recommended.js';
-import reactRecommended from 'eslint-plugin-react/configs/recommended.js';
-
 export default [
   {
     languageOptions: {
@@ -20,9 +17,7 @@ export default [
     },
     files: ['**/*.{js,jsx,ts,tsx}'],
   },
-  // Apply base ESLint recommended rules
-  eslintRecommended,
-  // Apply React recommended rules for React-specific files
+  
   {
     files: ['frontend/**/*.{js,jsx,ts,tsx}'],
     ...reactRecommended,
