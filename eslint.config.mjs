@@ -1,55 +1,21 @@
-import eslintRecommended from 'eslint/conf/eslint-recommended.js';
-import reactRecommended from 'eslint-plugin-react/configs/recommended.js';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
 
 export default [
   {
+    files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
-      globals: {
-        // Add browser globals
-        window: true,
-        document: true,
-        navigator: true,
-        // Add Node.js globals
-        require: true,
-        module: true,
-        process: true,
-        __dirname: true,
-      },
     },
-    files: ['**/*.{js,jsx,ts,tsx}'],
-    ...eslintRecommended,
-  },
-  
-  {
-    files: ['frontend/**/*.{js,jsx,ts,tsx}'],
-    ...reactRecommended,
-    languageOptions: {
-      ecmaVersion: 2024,
-      sourceType: 'node-modules',
-      globals: {
-        React: true,
-      },
+    plugins: {
+      react,
+      reactHooks,
     },
     rules: {
-      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off', // For React 17+
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
     },
-  },
-  // Specific rules for server files
-  {
-    files: ['database/**/*.{js,ts}'],
-    languageOptions: {
-      ecmaVersion: 2024,
-      sourceType: 'node_modules',
-      globals: {
-        module: true,
-        exports: true,
-      },
-    },
-    rules: {
-      'no-console': 'warn',
-    },
-    ...eslintRecommended,
   },
 ];
