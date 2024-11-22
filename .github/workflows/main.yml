@@ -52,5 +52,5 @@ jobs:
     - name: Run ESLint
       run: |
         # Lint all JavaScript and TypeScript files
-        npx eslint . --ext .js,.jsx,.ts,.tsx
+        npx eslint .
         echo "Linted all the JavaScript files successfully"
