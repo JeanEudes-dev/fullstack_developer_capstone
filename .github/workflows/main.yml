@@ -42,11 +42,11 @@ jobs:
     - name: Install Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: 14
+        node-version: 22.11.0
 
     - name: Install ESLint (if not in package.json)
       run: |
-        npm install eslint --save-dev
+        npm install eslint@latest --save-dev
         npx eslint --init  # Uncomment if you need to initialize ESLint (if not done yet)
 
     - name: Run ESLint
