@@ -1,3 +1,6 @@
+import eslintRecommended from 'eslint/conf/eslint-recommended.js';
+import reactRecommended from 'eslint-plugin-react/configs/recommended.js';
+
 export default [
   {
     languageOptions: {
@@ -16,6 +19,7 @@ export default [
       },
     },
     files: ['**/*.{js,jsx,ts,tsx}'],
+    ...eslintRecommended,
   },
   
   {
@@ -34,7 +38,7 @@ export default [
   },
   // Specific rules for server files
   {
-    files: ['backend/**/*.{js,ts}'],
+    files: ['database/**/*.{js,ts}'],
     languageOptions: {
       ecmaVersion: 2024,
       sourceType: 'node_modules',
@@ -46,5 +50,6 @@ export default [
     rules: {
       'no-console': 'warn',
     },
+    ...eslintRecommended,
   },
 ];
