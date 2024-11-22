@@ -16,7 +16,7 @@ export default {
         ecmaVersion: 2024,
         sourceType: 'node_modules',
       },
-      extends: ['eslint:recommended', 'plugin:react/recommended'],
+      // extends: ['eslint:recommended', 'plugin:react/recommended'],
       env: {
         browser: true,
       },
@@ -30,7 +30,7 @@ export default {
         ecmaVersion: 2024,
         sourceType: 'node_modules',
       },
-      extends: ['eslint:recommended'],
+      // extends: ['eslint:recommended'],
       env: {
         node: true,
       },
