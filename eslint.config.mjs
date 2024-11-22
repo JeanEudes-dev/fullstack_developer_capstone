@@ -4,7 +4,7 @@ export default {
     ecmaVersion: 'latest',
     sourceType: 'nodes_modules',
   },
-  extends: ['eslint:recommended'],
+  // extends: ['eslint:recommended'],
   env: {
     node: true,
     browser: true,
