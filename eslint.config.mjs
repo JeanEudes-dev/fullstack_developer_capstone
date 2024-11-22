@@ -12,9 +12,9 @@ export default {
   overrides: [
     {
       files: ['frontend/**/*.{js,jsx,ts,tsx}'],
-      parserOptions: {
+      languageOptions: {
         ecmaVersion: 2024,
-        sourceType: 'module',
+        sourceType: 'node_modules',
       },
       extends: ['eslint:recommended', 'plugin:react/recommended'],
       env: {
@@ -26,7 +26,7 @@ export default {
     },
     {
       files: ['database/**/*.{js,ts}'],
-      parserOptions: {
+      languageOptions: {
         ecmaVersion: 2024,
         sourceType: 'node_modules',
       },
