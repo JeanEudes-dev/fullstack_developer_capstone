@@ -1,6 +1,5 @@
 // eslint.config.mjs
 export default {
-  root: true,
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'nodes_modules',
